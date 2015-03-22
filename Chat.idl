@@ -1,0 +1,13 @@
+module ChatApp {
+  interface ChatCallback {
+    void callback(in string message);
+  };
+  interface Chat {
+    boolean post(in string name, in string message);
+    boolean join(in ChatCallback objref, in string name);
+    boolean list(in ChatCallback objref);
+    boolean quit(in ChatCallback objref);
+    boolean game(in ChatCallback objref, in char color);
+    boolean plop(in ChatCallback objref, in long row);
+  };
+};
